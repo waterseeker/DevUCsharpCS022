@@ -35,7 +35,7 @@
             <asp:RadioButton ID="toLondonRadioButton" runat="server" GroupName="toRadioButtonsGroup" Text="London" />
         </p>
         <p>
-            <asp:Button ID="okButton" runat="server" Text="OK" />
+            <asp:Button ID="okButton" runat="server" OnClick="okButton_Click" Text="OK" />
         </p>
         <p>
             Ticket Price: <asp:Label ID="resultLabel" runat="server"></asp:Label>
