@@ -24,7 +24,7 @@ namespace DevUCSharpCS_ASP_022
             priceGrid[2, 0] = 800.00;
             priceGrid[2, 1] = 805.00;
 
-            resultLabel.Text = priceGrid[1, 2].ToString();
+            resultLabel.Text = "";
         }
 
         protected void okButton_Click(object sender, EventArgs e)
@@ -39,9 +39,13 @@ namespace DevUCSharpCS_ASP_022
             else if (fromNewYorkRadioButton.Checked) toCity = 1;
             else toCity = 2;
 
-            if (fromCity == toCity) return;
+            if (fromCity == toCity)
+            {
+                resultLabel.Text = "";
+                return;
+            }
 
-            resultLabel.Text = string.Format("Your ticket price is: {0:C}." ,
+            resultLabel.Text = string.Format("{0:C}" ,
                 priceGrid[fromCity, toCity]);
         }
     }
